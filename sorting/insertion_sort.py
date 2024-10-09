@@ -6,7 +6,7 @@ for i in range(len(arr)):
             arr[j],arr[j-1]=arr[j-1],arr[j]
             print(f"{i},{j}->",arr)
         else:
-            break
+           break
 print(arr)
 # O(n^2)
 # Ω(n)
