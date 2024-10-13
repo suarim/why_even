@@ -10,6 +10,6 @@ while i<len(x) and j<len(y):
     else:
         z.append(y[j])
         j+=1
-z.extend(x[i:])
 z.extend(y[j:])
+z.extend(x[i:])
 print(z)

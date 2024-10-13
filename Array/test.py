@@ -1,9 +1,12 @@
-l=[1,2,3,4,5,6]
-k=2
-print(l[k:]+l[:k])
-
-l.reverse()
-z=len(l)-k
-l[:z]=reversed(l[:z])
-l[z:]=reversed(l[z:])
-print(l)
+mat=[[1,1,1],[1,0,1],[1,1,1]]
+l=[]
+for i in range(len(mat)):
+    for j in range(len(mat[0])):
+        if mat[i][j]==0:
+            l.append((i,j)) 
+for (i,j) in l:
+    for k in range(len(mat)):
+        mat[k][j]=0
+    for k in range(len(mat[0])):
+        mat[i][k]=0
+print(mat)

@@ -1,8 +1,20 @@
-l=[8,7,6,5,4,3,2,1]
-for i in range(len(l)):
-    for j in range(i,0,-1):
-        if l[j]<l[j-1]:
-            l[j],l[j-1]=l[j-1],l[j]
-        else:
-            break
-print(l)
+arr=[8,7,6,5]
+def partition(arr,low,high):
+    pivot=arr[high]
+    i=low-1
+    for j in range(low,high):
+        if arr[j]<pivot:
+            i+=1
+            arr[i],arr[j]=arr[j],arr[i]
+    arr[i+1],arr[high]=arr[high],arr[i+1]
+    return i+1
+
+
+def quicksort(arr,low,high):
+    if low<high:
+        p=partition(arr,low,high)
+        quicksort(arr,low,p-1)
+        quicksort(arr,p+1,high)
+
+quicksort(arr,0,len(arr)-1)
+print(arr)
