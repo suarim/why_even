@@ -1,7 +1,6 @@
-l=[1,2,3,4,5]
+l=[1,2,3,4,5,6]
 k=2
 print(l[k:]+l[:k])
-# O(n)
 
 l.reverse()
 z=len(l)-k
