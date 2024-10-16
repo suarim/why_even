@@ -9,5 +9,4 @@ for i,j in l:
         mat[k][j]=0
     for k in range(len(mat[0])):
         mat[i][k]=0
-
 print(mat)

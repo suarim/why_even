@@ -1,4 +1,5 @@
-arr=[8,7,6,5]
+
+
 def partition(arr,low,high):
     pivot=arr[high]
     i=low-1
@@ -6,15 +7,15 @@ def partition(arr,low,high):
         if arr[j]<pivot:
             i+=1
             arr[i],arr[j]=arr[j],arr[i]
-    arr[i+1],arr[high]=arr[high],arr[i+1]
     return i+1
 
-
-def quicksort(arr,low,high):
+def quick_sort(arr,low,high):
     if low<high:
         p=partition(arr,low,high)
-        quicksort(arr,low,p-1)
-        quicksort(arr,p+1,high)
+        quick_sort(arr,low,p-1)
+        quick_sort(arr,p+1,high)
 
-quicksort(arr,0,len(arr)-1)
+
+arr = [3, 1, 5, 4, 2, 100, -90, 0]
+quick_sort(arr, 0, len(arr) - 1)
 print(arr)
