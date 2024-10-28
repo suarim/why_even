@@ -8,8 +8,10 @@ def helper(s):
             res+=str(count)+s[i]
             count=1
         else:
-            count+=1 
+            count+=1
+
     return res
 for i in range(2,n+1):
     ans=helper(ans)
     print(ans)
+print(ans)

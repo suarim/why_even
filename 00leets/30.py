@@ -40,3 +40,4 @@ class Solution(object):
                 start += 1  # Move past the current index to find the next occurrence
         print(k)
         return list(k)
+    

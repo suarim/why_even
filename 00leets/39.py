@@ -7,7 +7,7 @@ def dfs(i,total):
         res.append(stack.copy())
         return
     if i>=len(arr) or total>target:
-        return
+        return  
     stack.append(arr[i])
     dfs(i,total+arr[i])
     stack.pop()
