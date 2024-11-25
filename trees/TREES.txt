@@ -1,0 +1,5 @@
+full binary trees -> have either 0 or 2 children
+complete bt -> all levels are completely filled except the last level and skewed as left as possible
+perfect bt -> all leaf nodes are at the same level
+balanced trees -> max height of log(n)
+degenerate trees -> every node has one child
