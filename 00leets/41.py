@@ -1,8 +1,9 @@
-nums = [1,2,0]
+nums = [3,2,0]
+#[0,2,3]
 missing=1
 nums.sort()
-for i in range(0,len(nums)):
-    if nums[i]==missing:
+for i in nums:
+    if i==missing:
         missing+=1
     elif i>missing:
         break

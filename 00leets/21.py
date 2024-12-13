@@ -21,22 +21,21 @@ def print_linked_list(head):
         current = current.next
     print("None")
 
-def merge(head1,head2):
+def merge(l1,l2):
     dummy=ListNode(0)
-    current=dummy
-    while head1 and head2:
-        if head1.value<head2.value:
-            current.next=head1
-            head1=head1.next
+    curr=dummy
+    while l1 and l2:
+        if l1.value<l2.value:
+            curr.next=l1
+            l1=l1.next
         else:
-            current.next=head2
-            head2=head2.next
-        current=current.next
-    if head1:
-        current.next=head1
-    elif head2:
-        current.next=head2
-    print_linked_list(dummy.next)
+            curr.next=l2
+            l2=l2.next
+        curr=curr.next
+    if l1:
+        curr.next=l1
+    if l2:
+        curr.next=l2
     return dummy.next
 
 # Example usage:

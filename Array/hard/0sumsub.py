@@ -5,7 +5,7 @@ for i in range(len(l)):
     if b==0:
         res.add(tuple([b]))
     for j in range(i+1,len(l)):
-        b^=l[j]
+        b+=l[j]
         if b==0:
             res.add(tuple(l[i:j+1]))
 print(res)
