@@ -19,6 +19,7 @@ def bottom(root):
         trav(root.left,key-1,lvl+1)
         trav(root.right,key+1,lvl+1)
     trav(root,0,0)
+    print(d)
     return [d[k][0] for k in sorted(d)]
 parent = TreeNode(1)
 parent.left = TreeNode(2)

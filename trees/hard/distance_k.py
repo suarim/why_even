@@ -48,4 +48,4 @@ parent.right.left = TreeNode(6)
 parent.right.right = TreeNode(7)
 
 # Call the function and print the output
-print(distanceK(parent,parent.left.left, 2))
+print(distanceK(parent,parent.left, 2))

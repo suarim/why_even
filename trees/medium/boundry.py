@@ -44,4 +44,5 @@ parent.right.right = TreeNode(7)
 x=left(parent)
 z=right(parent)[:-1][::-1]
 y=leaf(parent)
+print(x)
 print(x+y+z)
