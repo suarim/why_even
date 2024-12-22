@@ -1,6 +1,6 @@
 import string
 beginWord = "hit"
-endWord = "cog"
+endWord = "hot"
 wordList = ["hot","dot","dog","lot","log"]
 def check(bw,ew,wordlist):
     q=[]

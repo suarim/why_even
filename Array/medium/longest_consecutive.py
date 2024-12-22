@@ -1,4 +1,4 @@
-l=[100,200,1,2,3,6,4]
+l=[100,5,200,1,2,3,6,4]
 def linear_search(l,x):
     for i in range(len(l)):
         if l[i]==x:

@@ -26,5 +26,8 @@ def soln(board):
             if visited[i][j]==0:
                 board[i][j]='X'
     return board
-board = [["X","X","X","X"],["X","O","O","X"],["X","X","O","X"],["X","O","X","X"]]
+board = [["X","X","X","X"],
+         ["X","O","O","X"],
+         ["X","X","O","X"],
+         ["X","O","X","X"]]
 print(soln(board))

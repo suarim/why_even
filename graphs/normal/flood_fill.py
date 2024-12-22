@@ -13,9 +13,9 @@ def soln(image,sr,sc,color):
     return image
 
 
-image = [[0,0,0],[0,0,0]]
+image = [[1,1,0],[0,1,0]]
 sr = 0
 sc = 0
-color = 0
+color = 2
 
 print(soln(image,sr,sc,color))
