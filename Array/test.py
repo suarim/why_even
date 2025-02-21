@@ -1,14 +1,14 @@
-s="tree"
-h={}
-for i in range(len(s)):
-    if s[i] not in h:
-        h[s[i]]=1
-    else:
-        h[s[i]]+=1
+l = [9,128,-130]
 res=[]
-for i,j in h.items():
-    res.append((i,j))
+for i in range(len(l)):
+    b=l[i]
+    if b==7:
+        res.append([b])
+    for j in range(i+1,len(l)):
+        b+=l[j]
+        if b==7:
+            res.append(l[i:j+1])
+            break
+        if b>7:
+            break
 print(res)
-res.sort(key=lambda x:x[1],reverse=True)
-for i,j in res:
-    print(i*j,end="")
