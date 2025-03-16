@@ -26,3 +26,16 @@ for it in st:
             c+=1
         ln=max(ln,c)
 print(ln)
+
+l = [100, 5, 200, 1, 2, 3, 6, 4]
+numset = set(l)
+streak =1 
+for num in numset:
+    if num-1 not in numset:
+        curnum = num
+        curstreak = 1
+        while curnum+1 in numset:
+            curnum+=1
+            curstreak+=1
+        streak = max(streak,curstreak)
+print(streak)
