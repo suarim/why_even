@@ -1,14 +1,29 @@
-l = [9,128,-130]
-res=[]
-for i in range(len(l)):
-    b=l[i]
-    if b==7:
-        res.append([b])
-    for j in range(i+1,len(l)):
-        b+=l[j]
-        if b==7:
-            res.append(l[i:j+1])
-            break
-        if b>7:
-            break
-print(res)
+
+from collections import defaultdict
+board = [["1","2",".",".","3",".",".",".","."],
+ ["4",".",".","5",".",".",".",".","."],
+ [".","9","8",".",".",".",".",".","3"],
+ ["5",".",".",".","6",".",".",".","4"],
+ [".",".",".","8",".","3",".",".","5"],
+ ["7",".",".",".","2",".",".",".","6"],
+ [".",".",".",".",".",".","2",".","."],
+ [".",".",".","4","1","9",".",".","8"],
+ [".",".",".",".","8",".",".","7","9"]]
+rows=defaultdict(set)
+cols=defaultdict(set)
+boxes=defaultdict(set)
+def valid(num,i,j):
+    if num==".":
+        return True
+    if num in rows[i] or num in cols[j] or num in boxes[(i//3,j//3)]:
+        return False
+    rows[i].add(num)
+    cols[j].add(num)
+    boxes[(i//3,j//3)].add(num)
+    return True
+for i in range(9):
+    for j in range(9):
+        if not valid(board[i][j],i,j):
+            print(False)
+            exit()
+print(True)
