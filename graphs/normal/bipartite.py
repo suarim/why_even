@@ -37,5 +37,5 @@ graph_not_bipartite = {
     2: [0, 1]
 }
 
-print(is_bipartite(graph_bipartite))  # Output: True (Graph is bipartite)
+# print(is_bipartite(graph_bipartite))  # Output: True (Graph is bipartite)
 print(is_bipartite(graph_not_bipartite))  # Output: False (Graph is not bipartite)

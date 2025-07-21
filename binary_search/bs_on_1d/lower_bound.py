@@ -4,7 +4,7 @@ r=len(arr)-1
 ans=0
 while l<r:
     m=(l+r)//2
-    if arr[m]<6:
+    if arr[m]<5:
         l=m+1
     else:
         ans=m

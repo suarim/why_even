@@ -22,6 +22,7 @@ def reverse(head):
         cur.next=prev
         prev=cur
         cur=nxt
+    prints(prev)
     return prev
 def is_palindrome_2(head):
     fast=slow=head
@@ -40,8 +41,8 @@ def is_palindrome_2(head):
 head = ListNode(1)
 head.next = ListNode(2)
 head.next.next = ListNode(3)
-head.next.next.next = ListNode(2)
-head.next.next.next.next = ListNode(1)
+head.next.next.next = ListNode(4)
+head.next.next.next.next = ListNode(5)
 prints(head)
 print(is_palindrome_1(head))
 print(is_palindrome_2(head))

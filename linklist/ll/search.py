@@ -15,6 +15,14 @@ def search(head,data):
             return True
         cur=cur.next
     return False
+def search(root,key):
+    cur=root
+    while cur.next:
+        if cur.val==key:
+            return True
+        elif cur.val>key:
+            return False
+        
 head=ListNode(1)
 head.next=ListNode(2)
 head.next.next=ListNode(3)
