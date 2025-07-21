@@ -7,4 +7,4 @@ target=9
 for i in range(len(l)):
     if target-l[i] in h:
         print([i,h[target-l[i]]])
-        break
+        # break

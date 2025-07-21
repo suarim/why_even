@@ -21,9 +21,10 @@ def soln(board):
             dfs(board,i,0,visited)
         if board[i][cols-1]=='O' and visited[i][cols-1]==0:
             dfs(board,i,cols-1,visited)
+    print(visited)  
     for i in range(rows):
         for j in range(cols):
-            if visited[i][j]==0:
+            if visited[i][j]==0 and board[i][j]=='O':
                 board[i][j]='X'
     return board
 board = [["X","X","X","X"],
